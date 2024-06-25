@@ -33,15 +33,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.cbExames = new System.Windows.Forms.ComboBox();
+            this.txtCodPetAtend = new System.Windows.Forms.TextBox();
+            this.txtTutorAtend = new System.Windows.Forms.TextBox();
+            this.cboExamesAtend = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridAtend = new System.Windows.Forms.DataGridView();
             this.btnFinalizar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtDescAtend = new System.Windows.Forms.TextBox();
+            this.dtpDiaAtendimento = new System.Windows.Forms.DateTimePicker();
+            this.dtpHrAtendimento = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.gridAtend)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -94,82 +96,105 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Hora";
             // 
-            // textBox1
+            // txtCodPetAtend
             // 
-            this.textBox1.Location = new System.Drawing.Point(156, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtCodPetAtend.Location = new System.Drawing.Point(156, 85);
+            this.txtCodPetAtend.Name = "txtCodPetAtend";
+            this.txtCodPetAtend.Size = new System.Drawing.Size(131, 20);
+            this.txtCodPetAtend.TabIndex = 5;
             // 
-            // textBox2
+            // txtTutorAtend
             // 
-            this.textBox2.Location = new System.Drawing.Point(156, 120);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(131, 20);
-            this.textBox2.TabIndex = 6;
+            this.txtTutorAtend.Location = new System.Drawing.Point(84, 120);
+            this.txtTutorAtend.Name = "txtTutorAtend";
+            this.txtTutorAtend.Size = new System.Drawing.Size(131, 20);
+            this.txtTutorAtend.TabIndex = 6;
             // 
-            // textBox3
+            // cboExamesAtend
             // 
-            this.textBox3.Location = new System.Drawing.Point(67, 152);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(64, 20);
-            this.textBox3.TabIndex = 7;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(204, 153);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(83, 20);
-            this.textBox4.TabIndex = 8;
-            // 
-            // cbExames
-            // 
-            this.cbExames.FormattingEnabled = true;
-            this.cbExames.Location = new System.Drawing.Point(153, 198);
-            this.cbExames.Name = "cbExames";
-            this.cbExames.Size = new System.Drawing.Size(134, 21);
-            this.cbExames.TabIndex = 9;
+            this.cboExamesAtend.FormattingEnabled = true;
+            this.cboExamesAtend.Location = new System.Drawing.Point(119, 298);
+            this.cboExamesAtend.Name = "cboExamesAtend";
+            this.cboExamesAtend.Size = new System.Drawing.Size(134, 21);
+            this.cboExamesAtend.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label6.Location = new System.Drawing.Point(23, 196);
+            this.label6.Location = new System.Drawing.Point(23, 296);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 22);
             this.label6.TabIndex = 10;
             this.label6.Text = "Exames";
             // 
-            // dataGridView1
+            // gridAtend
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 247);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(260, 90);
-            this.dataGridView1.TabIndex = 11;
+            this.gridAtend.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridAtend.Location = new System.Drawing.Point(27, 337);
+            this.gridAtend.Name = "gridAtend";
+            this.gridAtend.Size = new System.Drawing.Size(306, 135);
+            this.gridAtend.TabIndex = 11;
             // 
             // btnFinalizar
             // 
-            this.btnFinalizar.Location = new System.Drawing.Point(74, 367);
+            this.btnFinalizar.Location = new System.Drawing.Point(84, 478);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(172, 45);
             this.btnFinalizar.TabIndex = 12;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label7.Location = new System.Drawing.Point(23, 194);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 22);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Descrição";
+            // 
+            // txtDescAtend
+            // 
+            this.txtDescAtend.Location = new System.Drawing.Point(119, 196);
+            this.txtDescAtend.Multiline = true;
+            this.txtDescAtend.Name = "txtDescAtend";
+            this.txtDescAtend.Size = new System.Drawing.Size(226, 96);
+            this.txtDescAtend.TabIndex = 14;
+            // 
+            // dtpDiaAtendimento
+            // 
+            this.dtpDiaAtendimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDiaAtendimento.Location = new System.Drawing.Point(60, 153);
+            this.dtpDiaAtendimento.Name = "dtpDiaAtendimento";
+            this.dtpDiaAtendimento.Size = new System.Drawing.Size(83, 20);
+            this.dtpDiaAtendimento.TabIndex = 15;
+            // 
+            // dtpHrAtendimento
+            // 
+            this.dtpHrAtendimento.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHrAtendimento.Location = new System.Drawing.Point(204, 153);
+            this.dtpHrAtendimento.Name = "dtpHrAtendimento";
+            this.dtpHrAtendimento.Size = new System.Drawing.Size(68, 20);
+            this.dtpHrAtendimento.TabIndex = 16;
             // 
             // frmAtendimento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(329, 450);
+            this.ClientSize = new System.Drawing.Size(394, 535);
+            this.Controls.Add(this.dtpHrAtendimento);
+            this.Controls.Add(this.dtpDiaAtendimento);
+            this.Controls.Add(this.txtDescAtend);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnFinalizar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridAtend);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.cbExames);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cboExamesAtend);
+            this.Controls.Add(this.txtTutorAtend);
+            this.Controls.Add(this.txtCodPetAtend);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -177,7 +202,8 @@
             this.Controls.Add(this.label1);
             this.Name = "frmAtendimento";
             this.Text = "frmAtendimento";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmAtendimento_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridAtend)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,13 +216,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox cbExames;
+        private System.Windows.Forms.TextBox txtCodPetAtend;
+        private System.Windows.Forms.TextBox txtTutorAtend;
+        private System.Windows.Forms.ComboBox cboExamesAtend;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridAtend;
         private System.Windows.Forms.Button btnFinalizar;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtDescAtend;
+        private System.Windows.Forms.DateTimePicker dtpDiaAtendimento;
+        private System.Windows.Forms.DateTimePicker dtpHrAtendimento;
     }
 }

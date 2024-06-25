@@ -142,6 +142,7 @@
             this.gridTutor.RowHeadersWidth = 62;
             this.gridTutor.Size = new System.Drawing.Size(341, 168);
             this.gridTutor.TabIndex = 10;
+//            this.gridTutor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTutor_CellContentClick);
             // 
             // btnIncluir
             // 
@@ -171,6 +172,7 @@
             this.btnAlterar.TabIndex = 13;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnExcluir
             // 

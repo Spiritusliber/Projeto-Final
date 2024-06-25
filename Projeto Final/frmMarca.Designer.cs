@@ -52,6 +52,8 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.dtpDia = new System.Windows.Forms.DateTimePicker();
             this.dtpHora = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtIdConsulta = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridHorario)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +93,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label4.Location = new System.Drawing.Point(25, 118);
+            this.label4.Location = new System.Drawing.Point(25, 127);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 22);
             this.label4.TabIndex = 3;
@@ -161,6 +163,7 @@
             this.rdbFechado.TabStop = true;
             this.rdbFechado.Text = "Fechado";
             this.rdbFechado.UseVisualStyleBackColor = true;
+            this.rdbFechado.CheckedChanged += new System.EventHandler(this.rdbFechado_CheckedChanged);
             // 
             // rdbAberto
             // 
@@ -172,6 +175,7 @@
             this.rdbAberto.TabStop = true;
             this.rdbAberto.Text = "Aberto";
             this.rdbAberto.UseVisualStyleBackColor = true;
+            this.rdbAberto.CheckedChanged += new System.EventHandler(this.rdbAberto_CheckedChanged);
             // 
             // lblTutor
             // 
@@ -257,6 +261,7 @@
             this.gridHorario.Name = "gridHorario";
             this.gridHorario.Size = new System.Drawing.Size(266, 178);
             this.gridHorario.TabIndex = 11;
+            this.gridHorario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridHorario_CellContentClick);
             // 
             // btnIncluir
             // 
@@ -266,6 +271,7 @@
             this.btnIncluir.TabIndex = 12;
             this.btnIncluir.Text = "Incluir";
             this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
             // btnExcluir
             // 
@@ -275,6 +281,7 @@
             this.btnExcluir.TabIndex = 13;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // dtpDia
             // 
@@ -292,11 +299,30 @@
             this.dtpHora.Size = new System.Drawing.Size(66, 20);
             this.dtpHora.TabIndex = 15;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label11.Location = new System.Drawing.Point(25, 94);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(95, 22);
+            this.label11.TabIndex = 16;
+            this.label11.Text = "idConsulta";
+            // 
+            // txtIdConsulta
+            // 
+            this.txtIdConsulta.Location = new System.Drawing.Point(126, 96);
+            this.txtIdConsulta.Name = "txtIdConsulta";
+            this.txtIdConsulta.Size = new System.Drawing.Size(100, 20);
+            this.txtIdConsulta.TabIndex = 17;
+            // 
             // frmMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(331, 699);
+            this.Controls.Add(this.txtIdConsulta);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.dtpHora);
             this.Controls.Add(this.dtpDia);
             this.Controls.Add(this.btnExcluir);
@@ -347,5 +373,7 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.DateTimePicker dtpDia;
         private System.Windows.Forms.DateTimePicker dtpHora;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtIdConsulta;
     }
 }
