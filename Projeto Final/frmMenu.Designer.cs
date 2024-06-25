@@ -45,6 +45,7 @@
             this.tutorPetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.marcaçãoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.atendimentoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,7 +120,8 @@
             // 
             this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.marcacaoToolStripMenuItem,
-            this.atendimentoToolStripMenuItem});
+            this.atendimentoToolStripMenuItem,
+            this.exameToolStripMenuItem});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultasToolStripMenuItem.Text = "Consultas";
@@ -174,7 +176,7 @@
             // marcaçãoToolStripMenuItem1
             // 
             this.marcaçãoToolStripMenuItem1.Name = "marcaçãoToolStripMenuItem1";
-            this.marcaçãoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.marcaçãoToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
             this.marcaçãoToolStripMenuItem1.Text = "Marcação";
             this.marcaçãoToolStripMenuItem1.Click += new System.EventHandler(this.marcaçãoToolStripMenuItem1_Click);
             // 
@@ -184,6 +186,13 @@
             this.atendimentoToolStripMenuItem1.Size = new System.Drawing.Size(144, 22);
             this.atendimentoToolStripMenuItem1.Text = "Atendimento";
             this.atendimentoToolStripMenuItem1.Click += new System.EventHandler(this.atendimentoToolStripMenuItem1_Click);
+            // 
+            // exameToolStripMenuItem
+            // 
+            this.exameToolStripMenuItem.Name = "exameToolStripMenuItem";
+            this.exameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exameToolStripMenuItem.Text = "Exame";
+            this.exameToolStripMenuItem.Click += new System.EventHandler(this.exameToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
@@ -220,6 +229,7 @@
         private System.Windows.Forms.ToolStripMenuItem tutorPetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcaçãoToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem atendimentoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem exameToolStripMenuItem;
     }
 }
 

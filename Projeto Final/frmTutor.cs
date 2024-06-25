@@ -142,5 +142,48 @@ namespace Projeto_Final
                 conexao.Fechar();
             }
         }
+        private void alterarDB()
+        {
+            conexao conexao = new conexao();
+
+            string consultaSQL = "UPDATE Tutor SET nomeTutor = @nomeTutor, celularTutor = @celularTutor, emailTutor = @emailTutor where CPF = @CPF";
+
+            try
+            {
+                using (SqlConnection conn = conexao.AbrirBanco())
+                {
+                    using (SqlCommand cmd = new SqlCommand(consultaSQL, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@CPF", txtCpf.Text);
+
+                        cmd.Parameters.AddWithValue("@nomeTutor", txtNome.Text);
+
+                        cmd.Parameters.AddWithValue("@celularTutor", txtCelular.Text);
+
+                        cmd.Parameters.AddWithValue("@emailTutor", txtEmail.Text);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                    MessageBox.Show("Dados Alterados com Sucesso!");
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+
+            }
+            finally
+            {
+                conexao.Fechar();
+            }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            alterarDB();
+        }
+
     }
 }
