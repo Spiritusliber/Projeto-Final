@@ -21,40 +21,39 @@ namespace Projeto_Final
         {
             frmTutor tutor = new frmTutor();
             tutor.Show();
-
         }
 
         private void petToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPet tutor = new frmPet();
-            tutor.Show();
+            frmPet pet = new frmPet();
+            pet.Show();
         }
 
         private void veterinárioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmVet tutor = new frmVet();
-            tutor.Show();
+            frmVet vet = new frmVet();
+            vet.Show();
 
         }
 
         private void espécieToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEspecie tutor = new frmEspecie();
-            tutor.Show();
+            frmEspecie especie = new frmEspecie();
+            especie.Show();
 
         }
 
         private void raçaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmRaca tutor = new frmRaca();
-            tutor.Show();
+            frmRaca raca = new frmRaca();
+            raca.Show();
 
         }
 
         private void atendimentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAtendimento tutor = new frmAtendimento();
-            tutor.Show();
+            frmAtendimento atendimento = new frmAtendimento();
+            atendimento.Show();
         }
 
         private void tutorToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -66,8 +65,8 @@ namespace Projeto_Final
 
         private void petToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmPet tutor = new frmPet();
-            tutor.Show();
+            frmPet pet = new frmPet();
+            pet.Show();
 
         }
 
@@ -78,27 +77,33 @@ namespace Projeto_Final
         }
         private void marcacaoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmMarca frm = new frmMarca();
-            frm.Show();
+            frmMarca marca = new frmMarca();
+            marca.Show();
         }
 
         private void atendimentoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmAtendimento frm = new frmAtendimento();
-            frm.Show();
+            frmAtendimento atendimento = new frmAtendimento();
+            atendimento.Show();
 
         }
 
         private void marcacaoToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            frmMarca frm = new frmMarca();
-            frm.Show();
+            frmMarca marca = new frmMarca();
+            marca.Show();
         }
 
         private void marcaçãoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmMarca frm = new frmMarca();
             frm.Show();
+        }
+
+        private void exameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmExame exame = new frmExame();
+            exame.Show();
         }
     }
 }

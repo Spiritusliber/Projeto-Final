@@ -90,9 +90,47 @@ namespace Projeto_Final
             }
         }
 
+        private void alterarDB()
+        {
+            conexao conexao = new conexao();
+
+            string consultaSQL = "UPDATE Pet SET nomePet = @nomePet, sexoPet = @sexoPet, NascPet = @nascPet where idPet = @idPet";
+
+            try
+            {
+                using (SqlConnection conn = conexao.AbrirBanco())
+                {
+                    using (SqlCommand cmd = new SqlCommand(consultaSQL, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@idPet", txtCodPet.Text);
+
+                        cmd.Parameters.AddWithValue("@nomePet", txtNomePet.Text);
+
+                        cmd.Parameters.AddWithValue("@sexoPet", Genero);
+
+                        cmd.Parameters.AddWithValue("@nascPet", txtNascPet.Text);
+
+                        cmd.ExecuteNonQuery();
+                    }
+                    MessageBox.Show("Dados Alterados com Sucesso!");
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+
+            }
+            finally
+            {
+                conexao.Fechar();
+            }
+        }
+
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-
+            alterarDB();
         }
 
         private void PreencherComboBoxEspecie()
@@ -149,10 +187,9 @@ namespace Projeto_Final
 
         private void cboEspecie_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Obtém o ID da espécie selecionada
+
             int idEspecie = Convert.ToInt32(cboEspecie.SelectedValue);
 
-            // Preenche o ComboBox de Raça com base na espécie selecionada
             PreencherComboBoxRaca(idEspecie);
         }
 
