@@ -5,7 +5,7 @@
 ## 📚 Tabela de Conteúdos
 
 - [Sobre](#-sobre)
-- [Tecnologias](#--tecnologias)
+- [Tecnologias](#-tecnologias)
 - [Contato](#-contato)
 
 
